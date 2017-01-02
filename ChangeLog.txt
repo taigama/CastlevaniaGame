@@ -1,0 +1,8 @@
+﻿-BossSpirit.cpp
+-MainGame.cpp
+-Item.cpp, .h
+-Medusa.cpp, .h
+-Vambat.cpp
+-Whip.cpp
+-Player.cpp, .h
+-Tất cả các file .cpp thuộc folder item

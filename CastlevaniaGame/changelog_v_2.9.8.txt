@@ -1,0 +1,69 @@
+﻿
+
+K_2.9.8 -------------
+--- không biết nữa --
+
+
+
+
+
+
+K_2.9.5 ----------------
+---- MakeItEasy ----
+_ RedBat
+_ Head
+_ Grinder
+_ Misc
+
+
+
+
+
+
+
+
+K_2.9 -----------------------------
+-------- Danger ----------
+
+
+_ StandItem
+_ Spawner
+_ resource: sửa map (txt và đám tiled), thêm sprite vào cinematic, sprite grinder
+_ Grinder
+_ OLoader
+
+
+
+
+
+K_2.7 -----------------------------
+--------- The FREEZING ------------
+
+_ GroupObject: thêm UpdateActive() & RenderActive()
+_ World:
++++ sắp xếp lại
++++ làm groupEffect & groupProjectile hoạt động độc lập (group special ko get từ group này nữa)
++++ thêm các tính năng pause & freeze
+_ MainGame: các vấn đề liên quan đến phím bấm.
++++ Enter chính: pause & unpause
++++ C: change weapon
++++ num+: tăng đạn
+
+thêm #define WATCH, dùng thay cho GETWATCH (render UI)
+sửa player phần đánh ra vũ khí: thêm WATCH
+fix destructible
+
+-------------
+toàn bộ enemy (lớp cha & các con): thêm health max & freezing
+
+medusa & vambat: Init máu tối đa, sửa hàm HealthDot
+Bone, Ghost, Knight override hàm take dame
+
+--------------
+holy fire & holy water: làm đóng băng địch khi chạm vô
+holy fire giảm tần số chuyển sprite
+
+---------- !!! ----------
+Fix lỗi con rắn không gán biến spriteHandler
+	=> khi bị đánh trúng, tạo effect không có spriteHandler
+		=> văng

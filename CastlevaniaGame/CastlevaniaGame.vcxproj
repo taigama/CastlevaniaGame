@@ -68,15 +68,20 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;dsound.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -118,6 +123,200 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Axe.cpp" />
+    <ClCompile Include="Bar.cpp" />
+    <ClCompile Include="BattleBoss.cpp" />
+    <ClCompile Include="BigHeart.cpp" />
+    <ClCompile Include="BlueBat.cpp" />
+    <ClCompile Include="Bone.cpp" />
+    <ClCompile Include="Boomerang.cpp" />
+    <ClCompile Include="BossSpirit.cpp" />
+    <ClCompile Include="Brick.cpp" />
+    <ClCompile Include="Bubble.cpp" />
+    <ClCompile Include="Chicken.cpp" />
+    <ClCompile Include="CinematicElement.cpp" />
+    <ClCompile Include="CinematicHost.cpp" />
+    <ClCompile Include="Cross.cpp" />
+    <ClCompile Include="Crystal.cpp" />
+    <ClCompile Include="DeadZone.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Gate.cpp" />
+    <ClCompile Include="GetSubWeapon.cpp" />
+    <ClCompile Include="Ghost.cpp" />
+    <ClCompile Include="Grinder.cpp" />
+    <ClCompile Include="GSound.cpp" />
+    <ClCompile Include="Head.cpp" />
+    <ClCompile Include="Heart.cpp" />
+    <ClCompile Include="Hit.cpp" />
+    <ClCompile Include="HolyFire.cpp" />
+    <ClCompile Include="HolyWater.cpp" />
+    <ClCompile Include="Knife.cpp" />
+    <ClCompile Include="Knight.cpp" />
+    <ClCompile Include="Medusa.cpp" />
+    <ClCompile Include="MoneyBag.cpp" />
+    <ClCompile Include="Multiply.cpp" />
+    <ClCompile Include="OLoader.cpp" />
+    <ClCompile Include="Potion.cpp" />
+    <ClCompile Include="Rubble.cpp" />
+    <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="Spirit.cpp" />
+    <ClCompile Include="StandItem.cpp" />
+    <ClCompile Include="Treasure.cpp" />
+    <ClCompile Include="VamBat.cpp" />
+    <ClCompile Include="ColliderBlock.cpp" />
+    <ClCompile Include="Destructible.cpp" />
+    <ClCompile Include="dsutil.cpp" />
+    <ClCompile Include="dxutil.cpp" />
+    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyFire.cpp" />
+    <ClCompile Include="Fish.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GateWay.cpp" />
+    <ClCompile Include="Ghoul.cpp" />
+    <ClCompile Include="Ground.cpp" />
+    <ClCompile Include="GroupObject.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Misc.cpp" />
+    <ClCompile Include="OQuadTree.cpp" />
+    <ClCompile Include="Panther.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="BackgroundQuadTree.cpp" />
+    <ClCompile Include="RedBat.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Stair.cpp" />
+    <ClCompile Include="TileMaps.cpp" />
+    <ClCompile Include="Whip.cpp" />
+    <ClCompile Include="WhipUpgrade.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="Zone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Axe.h" />
+    <ClInclude Include="Bar.h" />
+    <ClInclude Include="BattleBoss.h" />
+    <ClInclude Include="BigHeart.h" />
+    <ClInclude Include="BlueBat.h" />
+    <ClInclude Include="Bone.h" />
+    <ClInclude Include="Boomerang.h" />
+    <ClInclude Include="BossSpirit.h" />
+    <ClInclude Include="Brick.h" />
+    <ClInclude Include="Bubble.h" />
+    <ClInclude Include="Chicken.h" />
+    <ClInclude Include="CinematicElement.h" />
+    <ClInclude Include="CinematicHost.h" />
+    <ClInclude Include="Cross.h" />
+    <ClInclude Include="Crystal.h" />
+    <ClInclude Include="DeadZone.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="Gate.h" />
+    <ClInclude Include="GetSubWeapon.h" />
+    <ClInclude Include="Ghost.h" />
+    <ClInclude Include="Grinder.h" />
+    <ClInclude Include="GSound.h" />
+    <ClInclude Include="Head.h" />
+    <ClInclude Include="Heart.h" />
+    <ClInclude Include="Hit.h" />
+    <ClInclude Include="HolyFire.h" />
+    <ClInclude Include="HolyWater.h" />
+    <ClInclude Include="Knife.h" />
+    <ClInclude Include="Knight.h" />
+    <ClInclude Include="Medusa.h" />
+    <ClInclude Include="MoneyBag.h" />
+    <ClInclude Include="Multiply.h" />
+    <ClInclude Include="OLoader.h" />
+    <ClInclude Include="Potion.h" />
+    <ClInclude Include="Rubble.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="Spawner.h" />
+    <ClInclude Include="Spirit.h" />
+    <ClInclude Include="StandItem.h" />
+    <ClInclude Include="Treasure.h" />
+    <ClInclude Include="VamBat.h" />
+    <ClInclude Include="ColliderBlock.h" />
+    <ClInclude Include="Destructible.h" />
+    <ClInclude Include="dsutil.h" />
+    <ClInclude Include="dxutil.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyFire.h" />
+    <ClInclude Include="Fish.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GateWay.h" />
+    <ClInclude Include="Ghoul.h" />
+    <ClInclude Include="Ground.h" />
+    <ClInclude Include="GroupObject.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Misc.h" />
+    <ClInclude Include="OQuadTree.h" />
+    <ClInclude Include="Panther.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="BackgroundQuadTree.h" />
+    <ClInclude Include="RedBat.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Stair.h" />
+    <ClInclude Include="ThamSo.h" />
+    <ClInclude Include="TileMaps.h" />
+    <ClInclude Include="Whip.h" />
+    <ClInclude Include="WhipUpgrade.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="Zone.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Maps\map1.png" />
+    <Image Include="Resources\Maps\map1_tiled.PNG" />
+    <Image Include="Resources\Maps\map2.png" />
+    <Image Include="Resources\Maps\map2_tiled.PNG" />
+    <Image Include="Resources\Sprites\bar_health.bmp" />
+    <Image Include="Resources\Sprites\blank.bmp" />
+    <Image Include="Resources\Sprites\bonus.bmp" />
+    <Image Include="Resources\Sprites\flash.bmp" />
+    <Image Include="Resources\Sprites\snake.png" />
+    <Image Include="Resources\Sprites\VamBat.png" />
+    <Image Include="Resources\Sprites\creep_left.bmp" />
+    <Image Include="Resources\Sprites\creep_right.bmp" />
+    <Image Include="Resources\Sprites\destructible.bmp" />
+    <Image Include="Resources\Sprites\effect.bmp" />
+    <Image Include="Resources\Sprites\font.bmp" />
+    <Image Include="Resources\Sprites\heart.bmp" />
+    <Image Include="Resources\Sprites\map1.bmp" />
+    <Image Include="Resources\Sprites\redEdge.bmp" />
+    <Image Include="Resources\Sprites\simon_left.bmp" />
+    <Image Include="Resources\Sprites\simon_right.bmp" />
+    <Image Include="Resources\Sprites\subweapon_left.bmp" />
+    <Image Include="Resources\Sprites\subweapon_right.bmp" />
+    <Image Include="Resources\Sprites\whip_left.bmp" />
+    <Image Include="Resources\Sprites\whip_right.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\Sounds\stage-01.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CastlevaniaGame.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\Maps\map1quadtree.txt" />
+    <Text Include="Resources\Maps\map1_GO.txt" />
+    <Text Include="Resources\Maps\map1_GO_quadtree.txt" />
+    <Text Include="Resources\Maps\map1_matrix.txt" />
+    <Text Include="Resources\Maps\map1_quadtree.txt" />
+    <Text Include="Resources\Maps\map2quadtree.txt" />
+    <Text Include="Resources\Maps\map2_GO.txt" />
+    <Text Include="Resources\Maps\map2_GO_quadtree.txt" />
+    <Text Include="Resources\Maps\map2_matrix.txt" />
+    <Text Include="Resources\Maps\map2_quadtree.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="changelog_v_2.9.8.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
