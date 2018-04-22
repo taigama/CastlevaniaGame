@@ -23,6 +23,5 @@ Game, clone of Castlevania (NES), lvl 1-2 (boss Medusa)
 
 # codes
 These are all source codes and resources for the game. If you want to using our codes:
-- Create a win32 project.
-- Install DirectX SDK (June 2010) and link (and include) to your project.
-- Copy these files to your project folder.
+- Install DirectX SDK (June 2010) (**recommended:** install it at the default location).
+- Use MS Visual Studio (**recommended**: 2015) to open the project.
