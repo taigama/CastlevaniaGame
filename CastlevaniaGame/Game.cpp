@@ -164,10 +164,23 @@ void Game::Init()
 	
 }
 
+// update K_3.2
 void Game::_ProcessKeyBoard()
 {
 	// Collect all key states first
-	keyboard->GetDeviceState(sizeof(keystate), keystate); //Xem phim nao dang nhan
+	static HRESULT result;
+	// Collect all key states first
+	result = keyboard->GetDeviceState(sizeof(keystate), keystate); //Xem phim nao dang nhan
+
+	if (FAILED(result))
+	{
+		// If the keyboard lost focus or was not acquired then try to get control back.
+		if ((result == DIERR_INPUTLOST) || (result == DIERR_NOTACQUIRED))
+		{
+			keyboard->Acquire();
+		}
+	}// ----------------------------------------------
+
 
 	if (IsKeyDown(DIK_ESCAPE))
 	{
