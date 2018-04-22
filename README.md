@@ -1,27 +1,27 @@
 # CastlevaniaGame
 C++, DirectX 9
 
-# University of Information Technology
+### University of Information Technology
 Viet Nam National University Ho Chi Minh City
 - Faculty of Software Engineering
 - course: Introduce to Game Programming
 
-# project
+### project
 Game, clone of Castlevania (NES), lvl 1-2 (boss Medusa)
 
-# platform
+### platform
 - C++
 - DirectX 9, Win32
 
-# mentor
-- ThS Đinh Nguyễn Anh Dũng
+### mentor
+- Master Đinh Nguyễn Anh DŨNG
 
-# member
-- Phạm Nữ Tuyết An
-- Nông Thị Lệ
-- Đinh Hoàng Khang
+### member
+- Phạm Nữ Tuyết AN
+- Nông Thị LỆ
+- Đinh Hoàng KHANG
 
-# codes
+### codes
 These are all source codes and resources for the game. If you want to using our codes:
 - Install DirectX SDK (June 2010) (**recommended:** install it at the default location).
 - Use MS Visual Studio (**recommended**: 2015) to open the project.
