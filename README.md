@@ -18,7 +18,7 @@ Game, clone of Castlevania (NES), lvl 1-2 (boss Medusa)
 
 ### member
 - Phạm Nữ Tuyết AN
-- [Nông Thị LỆ](https://github.com/taigama/CastlevaniaGame/invitations)
+- [Nông Thị LỆ](https://github.com/vyle3696)
 - Đinh Hoàng KHANG (me)
 
 ### codes
